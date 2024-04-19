@@ -178,7 +178,7 @@ const Register = () => {
       alert(
         "Registrasi gagal: Domain email tidak valid. Silakan periksa kembali."
       );
-      return; // Menghentikan eksekusi lebih lanjut dari handleSubmit
+      return;
     }
 
     // Validasi panjang nama
@@ -263,8 +263,8 @@ const Register = () => {
 
   // Definisikan fungsi handleBack di sini
   const handleHome = () => {
-    navigate("/"); // Kembali ke halaman sebelumnya
-    localStorage.removeItem("token"); // Kembali ke halaman sebelumnya
+    navigate("/");
+    localStorage.removeItem("token");
   };
 
   return (
@@ -287,7 +287,6 @@ const Register = () => {
             Register your account
           </h2>
 
-          {/* Tambahkan tombol back di sini */}
           <div className="flex items-center mb-4 mx-4">
             <button
               onClick={handleHome}

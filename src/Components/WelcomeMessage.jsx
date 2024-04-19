@@ -17,14 +17,12 @@ function WelcomeMessage() {
         }
       );
 
-      // Logging the response data to see its structure
       console.log("Response Data:", response.data);
 
       if (response.status !== 200) {
         throw new Error("Failed to fetch user data");
       }
 
-      // Assuming the user data is directly available in response.data
       const userData = response.data;
       console.log("userData", userData);
       return userData;
@@ -48,7 +46,6 @@ function WelcomeMessage() {
     }
   }
 
-  // Menggunakan useEffect untuk menjalankan fungsi getUserData saat komponen dimuat
   useEffect(() => {
     getUserData();
   }, []);
@@ -75,7 +72,6 @@ function WelcomeMessage() {
                   <p>
                     <strong>Email:</strong> {userData.data.email}
                   </p>
-                  {/* Tambahkan informasi lainnya sesuai kebutuhan */}
                 </div>
               </div>
             </div>
